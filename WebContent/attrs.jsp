@@ -28,7 +28,6 @@
     	<h1>NCATS-UNA demo</h1>
 	<%
 		Boolean found = false;
-		@SuppressWarnings("unchecked")
 		Enumeration<String> elems = (Enumeration<String>) session.getAttributeNames();	
 	
 		while (elems.hasMoreElements() && !found) {

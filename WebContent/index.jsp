@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<jsp:include page="head.jsp" flush="true" />
+<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css" media="all">
 	@import "resources/n3c_login_style.css";
@@ -38,7 +39,6 @@
 
 <div id="op_table" style="overflow: scroll;">&nbsp;</div>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 <script>
 $.getJSON("feeds/current_publications.jsp", function(data){

@@ -24,17 +24,14 @@ WebContent/images/n3c_logo.png -text svneol=unset#image/png
 WebContent/index.jsp -text
 WebContent/logout.jsp -text
 WebContent/mail_test.jsp -text
-WebContent/membership.jsp -text
 WebContent/mentions/index.jsp -text
 WebContent/mentions/scan.jsp -text
 WebContent/mentions/submit_suppress.jsp -text
 WebContent/metadata.jsp -text
 WebContent/navbar.jsp -text
-WebContent/profile.jsp -text
 WebContent/publications/scan.jsp -text
 WebContent/publications/submit_link.jsp -text
 WebContent/publications/submit_suppress.jsp -text
-WebContent/register.jsp -text
 WebContent/resources/autocomplete.css -text
 WebContent/resources/autocomplete.js -text
 WebContent/resources/d3.v4.min.js -text
@@ -43,7 +40,4 @@ WebContent/roster.jsp -text
 WebContent/search.jsp -text
 WebContent/session.jsp -text
 WebContent/sls.jsp -text
-WebContent/submit_enclave.jsp -text
-WebContent/submit_membership.jsp -text
-WebContent/submit_registration.jsp -text
 /pom.xml -text
