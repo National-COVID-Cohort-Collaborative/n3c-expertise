@@ -1,0 +1,49 @@
+* text=auto !eol
+/.classpath -text svneol=unset#application/xml
+/.project -text svneol=unset#application/xml
+.settings/.jsdtscope -text svneol=unset#application/xml
+.settings/org.eclipse.jdt.core.prefs -text
+.settings/org.eclipse.m2e.core.prefs -text
+.settings/org.eclipse.wst.common.component -text svneol=unset#application/xml
+.settings/org.eclipse.wst.common.project.facet.core.xml -text svneol=unset#application/xml
+.settings/org.eclipse.wst.jsdt.ui.superType.container -text
+.settings/org.eclipse.wst.jsdt.ui.superType.name -text
+.settings/org.eclipse.wst.validation.prefs -text
+WebContent/META-INF/MANIFEST.MF -text
+WebContent/acs.jsp -text
+WebContent/attrs.jsp -text
+WebContent/autocomplete_test.jsp -text
+WebContent/dashboard.jsp -text
+WebContent/dologin.jsp -text
+WebContent/dologout.jsp -text
+WebContent/fake_register.jsp -text
+WebContent/feeds/current_publications.jsp -text
+WebContent/footer.jsp -text
+WebContent/head.jsp -text
+WebContent/images/n3c_logo.png -text svneol=unset#image/png
+WebContent/index.jsp -text
+WebContent/logout.jsp -text
+WebContent/mail_test.jsp -text
+WebContent/membership.jsp -text
+WebContent/mentions/index.jsp -text
+WebContent/mentions/scan.jsp -text
+WebContent/mentions/submit_suppress.jsp -text
+WebContent/metadata.jsp -text
+WebContent/navbar.jsp -text
+WebContent/profile.jsp -text
+WebContent/publications/scan.jsp -text
+WebContent/publications/submit_link.jsp -text
+WebContent/publications/submit_suppress.jsp -text
+WebContent/register.jsp -text
+WebContent/resources/autocomplete.css -text
+WebContent/resources/autocomplete.js -text
+WebContent/resources/d3.v4.min.js -text
+WebContent/resources/n3c_login_style.css -text
+WebContent/roster.jsp -text
+WebContent/search.jsp -text
+WebContent/session.jsp -text
+WebContent/sls.jsp -text
+WebContent/submit_enclave.jsp -text
+WebContent/submit_membership.jsp -text
+WebContent/submit_registration.jsp -text
+/pom.xml -text
