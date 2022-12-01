@@ -41,7 +41,7 @@ table.dataTable thead .sorting_asc {
 			<c:choose>
 			<c:when test="${empty param.author}">
 				<sql:query var="names" dataSource="jdbc/N3CExpertiseTagLib">
-					select ms_id,title,correspondingauthor,pmid,article_title from n3c_pubs.manuscript natural join n3c_pubs.match natural join covid_litcovid.article_title;
+					select msid,title,correspondingauthor,pmid,article_title from n3c_pubs.manuscript natural join n3c_pubs.match natural join covid_litcovid.article_title;
 				</sql:query>
 
 				<h3>LITCOVID Articles</h3>
@@ -49,7 +49,7 @@ table.dataTable thead .sorting_asc {
 					<tr><th>MS ID</th><th>Manuscript Title</th><th>Corresponding Author</th><th>PMID</th><th>LITCOVID Title</th></tr>
 					<c:forEach items="${names.rows}" var="row" varStatus="rowCounter">
 						<tr>
-							<td>${row.ms_id}</td>
+							<td>${row.msid}</td>
 							<td>${row.title}</td>
 							<td>${row.correspondingauthor}</td>
 							<td><a href="https://pubmed.ncbi.nlm.nih.gov/${row.pmid}">${row.pmid}</a></td>
@@ -59,9 +59,9 @@ table.dataTable thead .sorting_asc {
 				</table>
 
 				<sql:query var="names" dataSource="jdbc/N3CExpertiseTagLib">
-					select manuscript.ms_id,manuscript.title,correspondingauthor,match.doi,biorxiv_current.title
+					select manuscript.msid,manuscript.title,correspondingauthor,match.doi,biorxiv_current.title
 					from n3c_pubs.manuscript, n3c_pubs.match, covid_biorxiv.biorxiv_current
-					where manuscript.ms_id = match.ms_id
+					where manuscript.msid = match.msid
 					  and match.doi = biorxiv_current.doi
 					order by doi;
 				</sql:query>
@@ -71,7 +71,7 @@ table.dataTable thead .sorting_asc {
 					<tr><th>MS ID</th><th>Manuscript Title</th><th>Corresponding Author</th><th>DOI</th><th>Preprint Title</th></tr>
 					<c:forEach items="${names.rows}" var="row" varStatus="rowCounter">
 						<tr>
-							<td>${row.ms_id}</td>
+							<td>${row.msid}</td>
 							<td>${row.title}</td>
 							<td>${row.correspondingauthor}</td>
 							<td><a href="https://doi.org/${row.doi}">${row.doi}</a></td>
@@ -83,7 +83,7 @@ table.dataTable thead .sorting_asc {
 				<sql:query var="names" dataSource="jdbc/N3CExpertiseTagLib">
 					select last_name, initial, count(*)
 					from n3c_pubs.ms_candidate
-					where not exists (select ms_id from n3c_pubs.match where ms_candidate.ms_id=match.ms_id)
+					where not exists (select msid from n3c_pubs.match where ms_candidate.ms_id=match.msid)
 					  and exists (select doi from n3c_pubs.bio_candidate
 					  			  where bio_candidate.last_name = ms_candidate.last_name
 					  			    and bio_candidate.initial = ms_candidate.initial
@@ -117,11 +117,11 @@ table.dataTable thead .sorting_asc {
             	<button type="submit" name="action" value="submit">Submit</button>
 				<sql:query var="names" dataSource="jdbc/N3CExpertiseTagLib">
 					select
-						ms_id,
+						msid,
 						title,
 						correspondingauthor
 					from n3c_pubs.manuscript
-					where not exists (select ms_id from n3c_pubs.match where match.ms_id = manuscript.ms_id)
+					where not exists (select msid from n3c_pubs.match where match.msid = manuscript.msid)
 					  and correspondingauthor ~ ?
 					;
 					<sql:param>${param.author}</sql:param>
@@ -133,8 +133,8 @@ table.dataTable thead .sorting_asc {
 					<tr><th>Link?</th><th>MS ID</th><th>Title</th><th>Corresponding Author</th></tr>
 					<c:forEach items="${names.rows}" var="row" varStatus="rowCounter">
 						<tr>
-							<td><input type="radio" id="manuscript_choice" name="manuscript_choice" value="${row.ms_id}"></td>
-							<td>${row.ms_id}</td>
+							<td><input type="radio" id="manuscript_choice" name="manuscript_choice" value="${row.msid}"></td>
+							<td>${row.msid}</td>
 							<td>${row.title}</td>
 							<td>${row.correspondingauthor}</td>
 						</tr>
