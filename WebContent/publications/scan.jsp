@@ -156,7 +156,7 @@ table.dataTable thead .sorting_asc {
 					<sql:param>${param.author}</sql:param>
 				</sql:query>
 
-				<h3>medRxiv/bioRxiv Preprints</h3>
+				<h3>medRxiv/bioRxiv Preprints (<a href="submit_suppress_all_biorxiv.jsp?author=${param.author}&initial=${param.initial}&doi=${row.doi}">suppress all</a>)</h3>
 				<table class="table table-striped">
 					<tr><th>Link?</th><th>Suppress?</th><th>DOI</th><th>Title</th><th>Rank</th><th>Author</th></tr>
 					<c:forEach items="${names.rows}" var="row" varStatus="rowCounter">
@@ -189,7 +189,7 @@ table.dataTable thead .sorting_asc {
 					<sql:param>${param.initial}</sql:param>
 				</sql:query>
 
-				<h3>NIH LitCOVID Publications</h3>
+				<h3>NIH LitCOVID Publications (<a href="submit_suppress_all_litcovid.jsp?author=${param.author}&initial=${param.initial}&pmid=${row.pmid}">suppress all</a>)</h3>
 				<table class="table table-striped">
 					<tr><th>Link?</th><th>Suppress?</th><th>PMID</th><th>Title</th><th>Rank</th><th>Author</th></tr>
 					<c:forEach items="${names.rows}" var="row" varStatus="rowCounter">
