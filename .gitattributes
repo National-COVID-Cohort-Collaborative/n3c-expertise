@@ -48,6 +48,8 @@ WebContent/resources/autocomplete.js -text
 WebContent/resources/d3.v4.min.js -text
 WebContent/resources/n3c_login_style.css -text
 WebContent/roster.jsp -text
+WebContent/scholar/author_author_link.jsp -text
+WebContent/scholar/author_author_map.jsp -text
 WebContent/scholar/author_crossref_link.jsp -text
 WebContent/scholar/author_crossref_map.jsp -text
 WebContent/scholar/author_link.jsp -text
@@ -58,6 +60,8 @@ WebContent/scholar/author_orcid_link.jsp -text
 WebContent/scholar/author_orcid_map.jsp -text
 WebContent/scholar/author_registration_link.jsp -text
 WebContent/scholar/author_registration_map.jsp -text
+WebContent/scholar/author_ror_link.jsp -text
+WebContent/scholar/author_ror_map.jsp -text
 WebContent/scholar/link.jsp -text
 WebContent/scholar/linkage.jsp -text
 WebContent/scholar/lookup_ror_link.jsp -text
